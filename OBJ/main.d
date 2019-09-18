@@ -1,7 +1,7 @@
 ..\obj\main.o: main.c
 ..\obj\main.o: stm32f10x.h
 ..\obj\main.o: ..\CORE\core_cm3.h
-..\obj\main.o: D:\keil 5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\main.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\main.o: system_stm32f10x.h
 ..\obj\main.o: stm32f10x_conf.h
 ..\obj\main.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
@@ -31,10 +31,12 @@
 ..\obj\main.o: ..\SYSTEM\delay\delay.h
 ..\obj\main.o: ..\SYSTEM\sys\sys.h
 ..\obj\main.o: ..\SYSTEM\usart\usart.h
-..\obj\main.o: D:\keil 5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\main.o: ..\HARDWARE\LED\led.h
 ..\obj\main.o: ..\HARDWARE\Motor\motor.h
 ..\obj\main.o: ..\HARDWARE\encoder\encoder.h
 ..\obj\main.o: ..\HARDWARE\timer\timer.h
 ..\obj\main.o: ..\HARDWARE\ADC\adc.h
 ..\obj\main.o: ..\HARDWARE\JY61\jy61.h
+..\obj\main.o: ..\HARDWARE\SPI\spi.h
+..\obj\main.o: ..\HARDWARE\NRF24L01\24l01.h

@@ -8,6 +8,8 @@
 "..\obj\timer.o"
 "..\obj\adc.o"
 "..\obj\jy61.o"
+"..\obj\spi.o"
+"..\obj\24l01.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\usart.o"
