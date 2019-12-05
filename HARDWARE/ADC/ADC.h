@@ -1,10 +1,17 @@
 #ifndef __ADC_H
-#define	__ADC_H
+#define __ADC_H	 
 
-#include "stm32f10x.h"
+#include "sys.h"
 
-void Adc_Init(void);
-u16  Get_Adc(u8 ch); 
-u16 Get_Adc_Average(u8 ch,u8 times); 
+#define Input_A  PBout(5)
+#define Input_B  PBout(6)
+#define Input_C  PBout(7)
 
-#endif 
+void ADC1_GPIO_Config(void);
+void ADC1_Mode_Config(void);
+u16 GetVolt(u16 advalue);
+void filter(void);
+void Distance(void);
+void minimum_value(void);
+void date_change(void);		 				    
+#endif

@@ -1,6 +1,7 @@
 #include "motor.h"
 #include "delay.h"
 #include "usart.h"
+float Velocity_KP=150,Velocity_KI=0,Velocity_KD=0;
 float Velocity_KPA=30,Velocity_KIA=0,Velocity_KDA=600;		   //左
 float Velocity_KPB=30,Velocity_KIB=0,Velocity_KDB=600;	       //右，80，60
 extern int Motor_A,Motor_B,Servo,Target_A,Target_B;  //电机舵机控制相关  
@@ -79,6 +80,16 @@ void Set_Pwm_Motor2(int motor_b)
     	if(motor_b<0)			PWMA2=7200,PWMA1=7200+motor_b;
 			else 	            PWMA1=7200,PWMA2=7200-motor_b;
 }
+
+int PID_position (int distance,int Target)//保持距离
+{
+	 static int BiasA=0,PwmA=0,Last_biasA=0,Integral_biasA=0;
+	 BiasA=Target-distance;                //计算偏差
+	 Integral_biasA+=BiasA;
+	 PwmA=Velocity_KP*BiasA+Velocity_KI*Integral_biasA+Velocity_KD*(BiasA-Last_biasA);   
+	 Last_biasA=BiasA;	                   //保存上一次偏差 
+	 return -PwmA; 
+}	
 
 
 /**************************************************************************

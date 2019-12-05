@@ -13,6 +13,7 @@ void Motor_Init(void);
 
 void Set_Pwm_Motor1(int motor_a);
 void Set_Pwm_Motor2(int motor_b);
+int PID_position (int distance,int Target);
 int Incremental_PI_A (int Encoder,int Target);
 int Incremental_PI_B (int Encoder,int Target);
 void Xianfu_Pwm(void);
