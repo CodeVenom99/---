@@ -32,8 +32,8 @@ void uart3_init(u32 bound)   //初始化 配置USART2
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
 	//初始化GPIOA
 	NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;			   //指定中断源
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;	   //抢占优先级1
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;             //指定响应优先级别1
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;	   //抢占优先级1
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;             //指定响应优先级别1
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;	               //打开中断
 	NVIC_Init(&NVIC_InitStructure);	
 	

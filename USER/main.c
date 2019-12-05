@@ -23,11 +23,12 @@
 		SPI2_Init();
 		NRF24L01_Init();
 		while(NRF24L01_Check());
-//	Encoder_Init();//优先级1
-//	 
-//	Motor_Init();//电机满幅7200
-//	 
-	Adc_Init();	
+	 
+	Encoder_Init();//优先级1
+	Motor_Init();//电机满幅7200
+// 
+	ADC1_GPIO_Config();
+	ADC1_Mode_Config();
 	NRF24L01_TX_Mode();	 
 	TIM1_Int_Init();
 	while(1);
